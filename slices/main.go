@@ -3,8 +3,7 @@ package main
 import "fmt"
 
 /*
-
-Expected Output is:
+Expected would be:
 
 [0 0 0]
 [1 2 3]
@@ -20,8 +19,11 @@ S[:] => [1 2 3 4 5 6 0 0 0]
 New Slice: =>  [5 4 3 2 1]
 After assignment x values: => [42 4 3 2 1]
 New Slice Values are: =>  [5 4 3 2 1]
+New Slice Before performing delete; => [3 4 5 6 34 332 322 2342]
+New Slice After performing delete; => [3 4 34 332 322 2342]
 [[] [] [] []]
 [[0] [1 2] [2 3 4] [3 4 5 6]]
+
 */
 
 func main() {
@@ -89,6 +91,14 @@ func main() {
 
 	fmt.Println("After assignment x values: =>", x)
 	fmt.Println("New Slice Values are: => ", ns)
+
+	// Delete from slice
+	// Delete 5,6 from slice
+	dslice := []int{3, 4, 5, 6, 34, 332, 322, 2342}
+	fmt.Println("New Slice Before performing delete; =>", dslice)
+
+	dslice = append(dslice[:2], dslice[4:]...)
+	fmt.Println("New Slice After performing delete; =>", dslice)
 
 	// 2D slice or slice of slice
 	sls := make([][]int, 4)
