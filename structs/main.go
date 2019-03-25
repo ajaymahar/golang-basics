@@ -63,8 +63,8 @@ func main() {
 		},
 	}
 
-	fmt.Println("----------------------------------")
+	fmt.Println("-----------------------------------")
 	fmt.Println("Name: ", foobar.firstName, foobar.lastName, "\nAge: ", foobar.age, "\nKnown Languages: \n Python\t  Go\tJava\n", foobar.isPython, "\t", foobar.isGo, "\t", foobar.isJava, "\n")
-	fmt.Println("----------------------------------")
+	fmt.Println("-----------------------------------")
 	fmt.Println("Name: ", kinley.firstName, kinley.lastName, "\nAge: ", kinley.age, "\nKnown Languages: \n Python\t  Go\tJava\n", kinley.isPython, "\t", kinley.isGo, "\t", kinley.isJava)
 }
